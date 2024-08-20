@@ -22,8 +22,8 @@
             <button type="submit" class="form-button">Login</button>
         </form>
         <div class="form-footer">
-            <a href="https://directory.etsakoclub81.org/forgot_password.html">Forgot your Password?</a><br>
-            <a href="https://directory.etsakoclub81.org/register.html">Not a Etsakoclub81 Member? Sign Up</a>
+            <a href="forgot_password.php">Forgot your Password?</a><br>
+            <a href="register.php">Not a Etsakoclub81 Member? Sign Up</a>
         </div>
     </div>
     <?php include 'includes/footer.php'; ?>
