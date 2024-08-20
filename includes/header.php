@@ -13,7 +13,7 @@
             <a href="register.php">Register</a>
             <a href="login.php">Login</a>
         <?php endif; ?>
-        <a href="etsakoclub81.org">Back to Main Website</a>
+        <a href="https://etsakoclub81.org">Back to Main Website</a>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <a href="logout.php">Logout</a>
         <?php endif; ?>
@@ -39,7 +39,7 @@
             <a href="register.php">Register</a>
             <a href="login.php">Login</a>
         <?php endif; ?>
-        <a href="etsakoclub81.org">Back to Main Website</a>
+        <a href="https://etsakoclub81.org">Back to Main Website</a>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
             <a href="logout.php">Logout</a>
         <?php endif; ?>
