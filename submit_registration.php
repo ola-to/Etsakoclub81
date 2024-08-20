@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->commit();
 
         // Redirect to login page
-        header("Location: https://directory.etsakoclub81.org/login.html");
+        header("Location: login.php");
         exit();
     } catch (Exception $e) {
         // Rollback the transaction if something failed
