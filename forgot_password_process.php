@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
         $resetLink = "reset_password.php?token=" . $token;
         $subject = "Password Reset Request";
         $message = "Click on the following link to reset your password: " . $resetLink;
-        $headers = "From: no-reply@domain.com";
+        $headers = "From: no-reply@etsakoclub81.org";
 
         if (mail($email, $subject, $message, $headers)) {
             echo "A password reset link has been sent to your email address.";
