@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     $sql = "UPDATE users SET reset_token='$token', reset_requested_at=NOW() WHERE email='$email'";
     if ($conn->query($sql) === TRUE) {
         // Send reset email
-        $resetLink = "https://directory.etsakoclub81.org/reset_password.php?token=" . $token;
+        $resetLink = "reset_password.php?token=" . $token;
         $subject = "Password Reset Request";
         $message = "Click on the following link to reset your password: " . $resetLink;
         $headers = "From: no-reply@domain.com";
