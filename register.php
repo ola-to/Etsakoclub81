@@ -9,7 +9,10 @@
     
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php 
+    session_start();
+    include 'includes/header.php';
+    ?>
     <div class="subheader">
         Registration Form
     </div>
@@ -24,6 +27,16 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     ">
+    <!-- Display error message if it exists -->
+        <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+    if (isset($_SESSION['error'])) {
+        echo "<div style='color: red;'>" . htmlspecialchars($_SESSION['error']) . "</div>";
+    }
+    ?>
         <form action="submit_registration.php" method="post" style="
     font-family: Arial, sans-serif;
     max-width: 600px;
@@ -299,6 +312,12 @@
 </form>
 </div>
 <?php include 'includes/footer.php'; ?>
+    <script>
+    // Clear the session error message after the page has loaded
+    window.addEventListener('load', function() {
+        <?php unset($_SESSION['error']); ?>
+    });
+</script>
     <script>
         
         function performSearch() {
