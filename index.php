@@ -435,11 +435,13 @@ $conn->close();
                         <img src="<?php echo $image_src; ?>" alt="Business Image" id="business-image" style="width: 100px; height: 200px; border: 1px solid lightgrey; vertical-align: top;">
                     </div>
                     <div class="column">
-                        <p>Name: <?php echo htmlspecialchars($user['first_name']); ?></p>
-                        <p>Business Type: 
+                        <p>Name: 
                             <a href="business_details.php?id=<?php echo urlencode($user['id']); ?>">
-                                <?php echo htmlspecialchars($user['business_type']); ?>
+                                <?php echo htmlspecialchars($user['first_name']); ?>
                             </a>
+                        </p>
+                        <p>Business Type:
+                                <?php echo htmlspecialchars($user['business_type']); ?>
                         </p>
                         <p>Location: 
                             <?php 
